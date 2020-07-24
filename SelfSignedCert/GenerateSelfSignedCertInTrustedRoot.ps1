@@ -1,4 +1,3 @@
-# USAGE: .\_GenerateSelfSignedCertInTrustedRoot.ps1 -certFriendlyName 'Cert for X' -fullyQualifiedHostname 'osw-agqpisvcs.novelis.biz' -certPass 'TODO'
 param(
     [Parameter(Mandatory=$true)]
     [string] $certFriendlyName,
