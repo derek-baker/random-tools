@@ -1,3 +1,3 @@
 (New-Object System.DirectoryServices.DirectorySearcher(
-    "(&(objectCategory=User)(samAccountName=$('baker')))"
+    "(&(objectCategory=User)(samAccountName=$('dbaker')))"
 )).FindOne().GetDirectoryEntry().memberOf
