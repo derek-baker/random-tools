@@ -31,7 +31,7 @@ Set-StrictMode -Version 'Latest'
 # }
 
 # Create one containers in new account
-az storage container create --name 'specsheet' --account-name $destinationStorageAccount.Name
+# az storage container create --name 'specsheet' --account-name $destinationStorageAccount.Name
 
 
 # To copy many containers
