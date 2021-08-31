@@ -1,8 +1,8 @@
 param(
-    $server = 'fny-sql-app1',
-    $sql  = "SELECT top 1 cast([XMLRequest] as text) FROM [PI-Interface].[dbo].[XMLArchive] where RequestDateTime between '2021-08-24 08:10:00' and '2021-08-24 08:13:40.590' and ObjectType = 'Order' and objectkey = '0102419239'",
-    $maxLength = 280000,
-    $outputFile = "$PSScriptRoot\badXml.xml"
+    [string] $server, 
+    [string] $sql, 
+    [int] $maxLength = 280000,
+    [string] $outputFile = "$PSScriptRoot\data.txt"
 )
 
-(invoke-sqlcmd -ServerInstance $sql -Query $sql -MaxCharLength).Column1 | Out-File $outputFile -Force -Verbose
+(invoke-sqlcmd -ServerInstance $server -Query $sql -MaxCharLength $maxLength).Column1 | Out-File $outputFile -Force -Verbose

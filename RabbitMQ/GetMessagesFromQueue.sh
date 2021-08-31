@@ -1,0 +1,1 @@
+curl -i -u {USER}:{PASSWORD} -H "content-type:application/json" -X POST http://{YOUR_HOST}:15672/api/queues/{VHOST}/{QUEUE_NAME}/get -d'{"count":5,"ackmode":"ack_requeue_true","encoding":"auto","truncate":50000000}' -o ./RabbitErrors.json
