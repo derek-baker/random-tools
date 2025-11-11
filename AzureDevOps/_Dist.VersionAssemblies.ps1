@@ -32,9 +32,6 @@ if (-not ($Env:BUILD_SOURCESDIRECTORY -and $Env:BUILD_BUILDNUMBER)) {
     Write-Host '$Env:BUILD_BUILDNUMBER - For example, enter something like:'
     Write-Host '$Env:BUILD_BUILDNUMBER = "Build HelloWorld_0000.00.00.0"'
     exit 1
-    # EX: 
-    #   $Env:BUILD_SOURCESDIRECTORY = "$PWD\NovelisDataBuilder.Service\NovelisDataBuilder.Service"
-    #   $Env:BUILD_BUILDNUMBER = 2.0.0.0
 }
 	
 # Make sure path to source code directory is available
@@ -92,4 +89,5 @@ if ($files) {
 }
 else {
     Write-Warning "Found no files."
+
 }
